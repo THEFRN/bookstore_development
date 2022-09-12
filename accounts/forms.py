@@ -6,10 +6,13 @@ from .models import CustomUser
 class CustomUserCreationForm(UserCreationForm):
     class Meta:
         model = CustomUser
-        fields = UserCreationForm.Meta.fields + ('age',)
+        fields = ('username', 'age', 'email',)
+        # fields = UserCreationForm.Meta.fields + ('age',)
+        # Default -> username, + age
+        # Required -> password1, password2
 
 
 class CustomUserChangeForm(UserChangeForm):
     class Meta:
         model = CustomUser
-        fields = UserChangeForm.Meta.fields
+        fields = ('username', 'age', 'email',)
