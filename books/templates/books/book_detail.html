@@ -1,0 +1,17 @@
+{% extends '_base.html' %}
+
+{% block page_title %}
+    {{ book.title }}
+{% endblock %}
+
+{% block content %}
+    <h3>name: {{ book.title }}</h3>
+    <br>
+    <h4>author: {{ book.author }}</h4>
+    <br>
+    <p>description: {{ book.description }}</p>
+    <br>
+    <p>price: {{ book.price }}</p>
+    <br>
+    <a href="{% url 'books_list' %}">Books List</a>
+{% endblock %}
