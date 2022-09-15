@@ -1,0 +1,10 @@
+{% extends '_base.html' %}
+
+{% block page_title %}
+    Books List
+{% endblock page_title%}
+{% block content %}
+    {% for book in books %}
+        <h2>{{ book.title }}</h2>
+    {% endfor %}
+{% endblock content %}
